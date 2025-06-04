@@ -98,4 +98,4 @@ Recomendamos o uso do Docker para projetos que precisam de:
 
 ---
 
-Este README foi criado por [Seu Nome/Usuário] como parte de um estudo prático e documentação do aprendizado inicial em Docker.
+Este README foi criado por Flavio como parte de um estudo prático e documentação do aprendizado inicial em Docker.
