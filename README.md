@@ -39,19 +39,17 @@ Para replicar este projeto, você precisará ter o **Docker Desktop** (para Wind
 
 Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner Docker:
 
-1.  **Abra o Terminal com Privilégios Elevados:**
+1.  **Abra o terminal:**
     * **No Windows:** É **fundamental** executar o Prompt de Comando ou PowerShell **como Administrador**. Isso garante que o cliente Docker possa se comunicar corretamente com o Docker Daemon.
     * **No macOS/Linux:** Geralmente, um terminal comum é suficiente. Em algumas configurações, pode ser necessário usar `sudo` para comandos específicos do Docker.
 
-2.  **Inicie o Contêiner Nginx:**
-    Execute o comando abaixo. Ele fará o download da imagem oficial do Nginx (se ainda não estiver em cache), criará um novo contêiner e o iniciará em segundo plano.
-
+2.  **Execute o contêiner:**
     ```bash
     docker run --name meu-primeiro-nginx -p 8080:80 -d nginx
     ```
-    * `--name meu-primeiro-nginx`: Atribui um nome descritivo ao contêiner.
-    * `-p 8080:80`: Mapeia a porta `8080` do seu host (máquina local) para a porta `80` do contêiner, onde o Nginx está escutando.
-    * `-d`: Executa o contêiner em modo "detached" (em segundo plano), liberando seu terminal.
+    * `--name meu-primeiro-nginx`: nome personalizado para o contêiner.    
+    * `-p 8080:80`: Mapeia a porta `8080` do seu host (máquina local) para a porta `80` do contêiner.
+    * `-d`: executa em segundo plano.
     * `nginx`: Especifica a imagem do Nginx a ser utilizada.
 
 3.  **Verifique o Status do Contêiner:**
@@ -60,7 +58,7 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     ```bash
     docker ps
     ```
-    Você deverá ver uma entrada para `meu-primeiro-nginx` com o `STATUS` como `Up`.
+    Você deverá ver o contêiner listado com status `Up`.
 
 4.  **Acesse o Nginx no Navegador:**
     Abra seu navegador web e digite o seguinte endereço:
@@ -68,7 +66,7 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     ```
     http://localhost:8080
     ```
-    Uma página de "Welcome to nginx!" será exibida, confirmando que o servidor está online.
+   Você verá a mensagem padrão: "Welcome to nginx!"
 
 ---
 
@@ -108,4 +106,4 @@ Recomendamos o uso do Docker para projetos que precisam de:
 
 ---
 
-Este README foi criado por Flavio como parte de um estudo prático e documentação do aprendizado inicial em Docker.
+Este README foi criado pelo grupo,como parte de um estudo prático e documentação do aprendizado inicial em Docker.
