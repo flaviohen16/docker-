@@ -11,6 +11,9 @@ Este projeto é um estudo inicial prático do Docker, focando em como podemos is
 5. [O que foi Testado](#o-que-foi-testado)
 6. [Dificuldades Enfrentadas](#dificuldades-enfrentadas)
 7. [Conclusão: Quando Usar Docker](#conclusão-quando-usar-docker)
+---
+## Objetivos do Projeto
+O objetivo deste projeto é demonstrar os conceitos fundamentais de containerização com Docker, configurando um servidor web Nginx simples.
 
 ---
 
