@@ -25,16 +25,25 @@ O objetivo deste projeto é demonstrar os conceitos fundamentais de containeriza
 
 ## Pré-requisitos
 
-Para replicar este projeto, você precisará ter o **Docker Desktop** (para Windows/macOS) ou **Docker Engine** (para Linux) instalado e configurado na sua máquina.
+Pré-requisitos para Utilizar o Docker
+Para replicar este projeto, você precisará ter o Docker instalado e configurado em sua máquina. Existem duas opções principais de instalação, dependendo do seu sistema operacional:
 
-* **Verifique a instalação do Docker:**
+* **Docker Desktop:** Recomendado para usuários de Windows e macOS. Ele oferece uma experiência completa com uma interface gráfica e ferramentas adicionais.Docker Desktop: Recomendado para usuários de Windows e macOS. Ele oferece uma experiência completa com uma interface gráfica e ferramentas adicionais.
+
+* **Docker Engine:** Ideal para usuários de Linux, sendo a forma mais comum de instalar e usar o Docker nesse ambiente.
+
+* **Como Verificar a Instalação do Docker**
+  Após a instalação, abra seu terminal ou prompt de comando e execute o seguinte comando para verificar se o Docker foi instalado corretamente:
     ```bash
     docker --version
     ```
+    Se o comando retornar a versão do Docker (ex: Docker version 24.0.5, build 24.0.5-0ubuntu1), você está pronto para prosseguir!
+  
     Caso o comando não seja reconhecido ou a instalação não esteja completa, siga as instruções oficiais para o seu sistema operacional:
     * [Instalação do Docker Desktop no Windows](https://docs.docker.com/desktop/install/windows-install/)
     * [Instalação do Docker Desktop no macOS](https://docs.docker.com/desktop/install/mac-install/)
     * [Instalação do Docker Engine no Linux](https://docs.docker.com/engine/install/)
+  Certifique-se de seguir os passos de instalação e configuração cuidadosamente para garantir que o Docker esteja funcionando corretamente em sua máquina antes de tentar replicar o projeto.
 
 ---
 
