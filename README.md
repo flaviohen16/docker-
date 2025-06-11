@@ -100,10 +100,26 @@ Neste projeto, focamos nos seguintes aspectos práticos do Docker:
 
 Durante a fase inicial de aprendizado e execução deste projeto, as principais dificuldades foram:
 
-* **Problemas de Permissão no Windows:** O erro mais comum foi `docker: error during connect: in the default daemon configuration on Windows, the docker client must be run with elevated privileges to connect...`. Isso ocorreu por não executar o Prompt de Comando/PowerShell como **Administrador**, impedindo a comunicação com o Docker Daemon.
+1. **Docker Desktop não Iniciado / Docker Daemon Inativo:**
+
+*Problema: Tentar executar comandos `docker` (como `docker run` ou ` docker ps`) e receber uma mensagem de erro como "Cannot connect to the Docker daemon. Is the docker daemon running on this host?" ou similar.
+*Causa: Esquecer de iniciar o aplicativo Docker Desktop (no Windows/macOS) ou o serviço Docker (no Linux) antes de tentar usar os comandos. O Docker precisa de um "servidor" (o daemon) para rodar os contêineres.
+Aprendizado/Solução: Entender que o Docker não é apenas um comando de terminal, mas um serviço que precisa estar em execução. A solução é simplesmente iniciar o Docker Desktop ou o serviço Docker.
 * **Docker Desktop não Iniciado:** A necessidade de garantir que o aplicativo Docker Desktop estivesse completamente inicializado antes de tentar executar qualquer comando Docker, pois ele é o responsável por gerenciar o ambiente de virtualização no Windows e macOS.
 * **Compreensão Inicial dos Comandos e Conceitos:** Assimilação de termos como "imagem", "contêiner", "mapeamento de portas" (`-p`), e modos de execução (`-d`) que são novos para quem não está familiarizado com a conteinerização.
 * **Depuração de Erros Genéricos:** Mensagens de erro iniciais do Docker que, para um iniciante, não são imediatamente claras sobre a causa raiz do problema.
+
+2. **Erro de Imagem Não Encontrada (Unable to find image 'minha-imagem:latest' locally)**
+
+*Problema: Ao tentar executar `docker run minha-imagem`, receber um erro dizendo que a imagem não foi encontrada localmente.
+*Causa: A imagem não foi construída (docker build) ou o nome/tag especificado no docker run está incorreto ou a imagem não existe no Docker Hub (ou no registry configurado).
+Aprendizado/Solução: Entender que é preciso ter a imagem disponível localmente (seja construindo-a com docker build ou puxando-a com docker pull) antes de tentar executar um contêiner a partir dela. Verificar a lista de imagens locais com docker images.
+
+3. **Confusão entre Imagem e Contêiner:**
+
+*Problema: Dificuldade inicial em diferenciar o que é uma "imagem" (o molde, o pacote executável) e o que é um "contêiner" (a instância em execução de uma imagem).
+*Causa: Conceitos novos e abstratos.
+*Aprendizado/Solução: A prática com comandos como `docker build`  e  `docker run`  ajuda a solidificar o entendimento. Analogias como "imagem é o bolo, contêiner é a fatia que você come" ou "imagem é a classe, contêiner é o objeto" podem ser úteis
 
 ---
 
