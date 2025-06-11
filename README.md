@@ -91,8 +91,8 @@ Neste projeto, focamos nos seguintes aspectos práticos do Docker:
 * **Instalação:** Confirmação da correta instalação e configuração do Docker Desktop no ambiente de desenvolvimento.
 * **Execução local:** Levantamento de um contêiner Docker contendo um servidor Nginx, acessível a partir da máquina local.
 * **Integração com outro serviço (implícito):** Embora Nginx seja um único serviço, a execução de um servidor web já demonstra a capacidade do Docker de empacotar e rodar softwares complexos que dependem de um sistema operacional base, bibliotecas, etc. (o Nginx se integra com a rede do host).
-* **Logs e outputs:** Verificação dos logs do contêiner para depuração inicial (`docker logs meu-primeiro-nginx`).
-* **Configuração básica:** Mapeamento de portas (`-p 8080:80`) e nomeação do contêiner (`--name`) como configurações essenciais para o uso do serviço.
+* **Logs e outputs:** Verificação dos logs do contêiner para depuração inicial (`docker logs meu-site`).
+* **Configuração básica:** Mapeamento de portas (`-p 80:80`).
 
 ---
 
@@ -104,7 +104,6 @@ Durante a fase inicial de aprendizado e execução deste projeto, as principais 
 
 * Problema: Tentar executar comandos `docker` (como `docker run` ou ` docker ps`) e receber uma mensagem de erro como "Cannot connect to the Docker daemon. Is the docker daemon running on this host?" ou similar.
 * Causa: Esquecer de iniciar o aplicativo Docker Desktop (no Windows/macOS) ou o serviço Docker (no Linux) antes de tentar usar os comandos. O Docker precisa de um "servidor" (o daemon) para rodar os contêineres.
-Aprendizado/Solução: Entender que o Docker não é apenas um comando de terminal, mas um serviço que precisa estar em execução. A solução é simplesmente iniciar o Docker Desktop ou o serviço Docker.
 * Docker Desktop não Iniciado:** A necessidade de garantir que o aplicativo Docker Desktop estivesse completamente inicializado antes de tentar executar qualquer comando Docker, pois ele é o responsável por gerenciar o ambiente de virtualização no Windows e macOS.
 * Compreensão Inicial dos Comandos e Conceitos:** Assimilação de termos como "imagem", "contêiner", "mapeamento de portas" (`-p`), e modos de execução (`-d`) que são novos para quem não está familiarizado com a conteinerização.
 * Depuração de Erros Genéricos:** Mensagens de erro iniciais do Docker que, para um iniciante, não são imediatamente claras sobre a causa raiz do problema.
@@ -113,7 +112,7 @@ Aprendizado/Solução: Entender que o Docker não é apenas um comando de termin
 
 * Problema: Ao tentar executar `docker run minha-imagem`, receber um erro dizendo que a imagem não foi encontrada localmente.
 * Causa: A imagem não foi construída (docker build) ou o nome/tag especificado no docker run está incorreto ou a imagem não existe no Docker Hub (ou no registry configurado).
-Aprendizado/Solução: Entender que é preciso ter a imagem disponível localmente (seja construindo-a com docker build ou puxando-a com docker pull) antes de tentar executar um contêiner a partir dela. Verificar a lista de imagens locais com docker images.
+* Aprendizado/Solução: Entender que é preciso ter a imagem disponível localmente (seja construindo-a com docker build ou puxando-a com docker pull) antes de tentar executar um contêiner a partir dela. Verificar a lista de imagens locais com docker images.
 
 3. **Confusão entre Imagem e Contêiner:**
 
