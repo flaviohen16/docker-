@@ -121,11 +121,11 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
 
 Neste projeto, focamos nos seguintes aspectos práticos do Docker:
 
-* **Instalação:** Confirmação da correta instalação e configuração do Docker Desktop no ambiente de desenvolvimento.
-* **Execução local:** Levantamento de um contêiner Docker contendo um servidor Nginx, acessível a partir da máquina local.
+* **Instalação e Configuração:** O primeiro passo foi garantir que o Docker Desktop estivesse corretamente instalado e configurado em seu ambiente de desenvolvimento. Uma base sólida é crucial para qualquer projeto Docker.
+* **Execução Local de Contêineres:** Testamos a capacidade de levantar um contêiner Docker contendo um servidor Nginx. Este servidor se tornou acessível diretamente da sua máquina local, simulando um ambiente de produção.
 * **Integração com outro serviço (implícito):** Embora Nginx seja um único serviço, a execução de um servidor web já demonstra a capacidade do Docker de empacotar e rodar softwares complexos que dependem de um sistema operacional base, bibliotecas, etc. (o Nginx se integra com a rede do host).
 * **Logs e outputs:** Verificação dos logs do contêiner para depuração inicial (`docker logs meu-site`).
-* **Configuração básica:** Mapeamento de portas (`-p 80:80`).
+* **Configuração básica:** Implementamos o mapeamento de portas (-p 80:80), uma configuração básica, mas essencial, para direcionar o tráfego da sua máquina local para o contêiner Docker.
 
 ---
 
