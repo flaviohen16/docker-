@@ -46,16 +46,27 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     * **No Windows:** É **fundamental** executar o Prompt de Comando ou PowerShell **como Administrador**. Isso garante que o cliente Docker possa se comunicar corretamente com o Docker Daemon.
     * **No macOS/Linux:** Geralmente, um terminal comum é suficiente. Em algumas configurações, pode ser necessário usar `sudo` para comandos específicos do Docker.
 
-2.  **Execute o contêiner:**
-    ```bash
-    docker run --name meu-primeiro-nginx -p 8080:80 -d nginx
-    ```
-    * `--name meu-primeiro-nginx`: nome personalizado para o contêiner.    
-    * `-p 8080:80`: Mapeia a porta `8080` do seu host (máquina local) para a porta `80` do contêiner.
-    * `-d`: executa em segundo plano.
-    * `nginx`: Especifica a imagem do Nginx a ser utilizada.
+2. **Contruindo o contêiner:**
+   ```bash
+   docker build -t meu-site . 
+   ```
+   * `docker build`: Inicia o processo de construção de uma imagem.
+   * `-t`: Indica que estamos nomeando e taggeando a imagem.
+   * `meu-site`: É o nome que estamos dando à imagem.
+   * ` . `: Indica que o `Dockerfile` (e os arquivos de contexto para a construção) está no diretório atual.
 
-3.  **Verifique o Status do Contêiner:**
+
+
+4.  **Execute o contêiner:**
+    ```bash
+    docker run  -p 80:80 meu-site
+    ```
+    *`docker run`: executa o contêiner.    
+    * `-p 80:80`: Mapeia a porta `80` do seu host (máquina local) para a porta `80` do contêiner.
+    * `-d`: executa em segundo plano.
+    * `meu-site`: Especifica a imagem a ser utilizada
+
+5.  **Verifique o Status do Contêiner:**
     Para confirmar que o contêiner foi iniciado com sucesso e está em execução:
 
     ```bash
@@ -63,11 +74,11 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     ```
     Você deverá ver o contêiner listado com status `Up`.
 
-4.  **Acesse o Nginx no Navegador:**
+6.  **Acesse o Nginx no Navegador:**
     Abra seu navegador web e digite o seguinte endereço:
 
     ```
-    http://localhost:8080
+    http://localhost:80
     ```
    Você verá a mensagem padrão: "Welcome to nginx!"
 
