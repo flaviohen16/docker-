@@ -65,7 +65,7 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     * `-p 80:80`: Mapeia a porta `80` do seu host (máquina local) para a porta `80` do contêiner.
     * `-d`: executa em segundo plano.
     * `meu-site`: Especifica a imagem a ser utilizada
-    ![imagem do comado parar rodar o contêiner](images/imagem_run.jpg "imagem do terminal")
+    ![imagem do comado para rodar o contêiner](images/imagem_run.jpg "imagem do terminal")
 
     ```bash
     docker run -p 80:80 --name meu-site-container -d meu-site
@@ -90,7 +90,6 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     http://localhost:80
     ```
    Você verá a mensagem padrão: "Welcome to nginx!"
-
     ![imagem da situação](images/imagem-do-localhost.jpg "situação do contêiner")
     
 
