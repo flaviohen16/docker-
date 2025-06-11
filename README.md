@@ -7,7 +7,7 @@ Este projeto é um estudo inicial prático do Docker, focando em como podemos is
 1. [Objetivos do Projeto](#objetivos-do-projeto)
 2. [O que é o Nginx?](#o-que-é-o-nginx)
 3. [Pré-requisitos](#pré-requisitos)
-4. [Como Executar](#como-executar)
+4. [Como Executar](#Código-de-Exemplo-Funcional)
 5. [O que foi Testado](#o-que-foi-testado)
 6. [Dificuldades Enfrentadas](#dificuldades-enfrentadas)
 7. [Conclusão: Quando Usar Docker](#conclusão-quando-usar-docker)
