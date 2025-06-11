@@ -54,10 +54,10 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
    * `-t`: Indica que estamos nomeando e taggeando a imagem.
    * `meu-site`: É o nome que estamos dando à imagem.
    * ` . `: Indica que o `Dockerfile` (e os arquivos de contexto para a construção) está no diretório atual.
+    ![imagem de criação do contêiner](images/imagem_build.jpg "imagem do terminal")
 
+3.  **Execute o contêiner:**
 
-
-4.  **Execute o contêiner:**
     ```bash
     docker run  -p 80:80 meu-site
     ```
@@ -65,22 +65,47 @@ Siga os passos abaixo para iniciar e testar o servidor Nginx em seu contêiner D
     * `-p 80:80`: Mapeia a porta `80` do seu host (máquina local) para a porta `80` do contêiner.
     * `-d`: executa em segundo plano.
     * `meu-site`: Especifica a imagem a ser utilizada
+    ![imagem do comado parar rodar o contêiner](images/imagem_run.jpg "imagem do terminal")
 
-5.  **Verifique o Status do Contêiner:**
+    ```bash
+    docker run -p 80:80 --name meu-site-container -d meu-site
+    ```
+    * `--name meu-site-container`: atribui um nome especifico ao contêiner(facilitando o gerenciamento)
+    * `-d `:Executa o contêiner em segundo plano. O Docker iniciará o contêiner e imediatamente retornará o controle do terminal para você.
+
+4.  **Verifique o Status do Contêiner:**
     Para confirmar que o contêiner foi iniciado com sucesso e está em execução:
 
     ```bash
     docker ps
     ```
     Você deverá ver o contêiner listado com status `Up`.
+    ![imagem da situação](images/docker-status.jpg "situação do contêiner")
 
-6.  **Acesse o Nginx no Navegador:**
+
+5.  **Acesse o Nginx no Navegador:**
     Abra seu navegador web e digite o seguinte endereço:
 
-    ```
+    ```bash
     http://localhost:80
     ```
    Você verá a mensagem padrão: "Welcome to nginx!"
+
+    ![imagem da situação](images/imagem-do-localhost.jpg "situação do contêiner")
+    
+
+6. **Usando website-templates:**
+    depois de acessar o navegador,vai escolher o template desejavel e altera o endereço:
+
+    ```bash
+    http://localhost:80/3-col-portfolio/
+    ```
+
+     ![imagem do web site ](images/localhost-col-porfolio.jpg "web site col-portfolio")
+
+7. **imagem do docker desktop:**
+    mostrando a visão do usuario dentro do docker desktop.
+    ![imagem do contêiner rodando no desktop](images/imagem_docker_desktop.jpg "imagem do docker desktop")
 
 ---
 
